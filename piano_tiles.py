@@ -16,6 +16,13 @@ mob_col = [127, 400, 680, 950]
 blacks = [1]
 sct = mss()
 
+for ind, col in enumerate(lap_col):
+    pixel = np.array(sct.grab({"left": col, "top": 529, "width": 1, "height": 1}))
+
+    if pixel[0][0][2] == 48:
+        device.shell(f"input tap {mob_col[ind]} {mob_row[2]}")
+        break
+
 while True:
     time.sleep(.13)
 
@@ -36,3 +43,7 @@ while True:
         device.shell(f"input tap {mob_col[blacks[0]]} {mob_row[2]}")
     else:
         break
+
+# print(np.array(sct.grab({"left": 1149, "top": 530, "width": 1, "height": 1})))
+# print(np.array(sct.grab({"left": 1152, "top": 498, "width": 1, "height": 1})))
+
