@@ -1,4 +1,4 @@
 # Automating mobile games with python
 
 ## Piano Tiles
-![](images/../piano_tiles.gif)
+![](images/piano_tiles.gif)
